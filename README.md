@@ -14,6 +14,15 @@ https://go.dev/doc/tutorial/
 - [x] [Create a module](https://go.dev/doc/tutorial/create-module.html), chapter: 02 - 08
 - [ ] [A Tour of Go](https://go.dev/tour/)
 
+## Books
+
+- [] [Let’s Go: Learn to Build Professional Web Applications with Go](https://lets-go.alexedwards.net/)
+- [] [Let’s Go Further: Advanced patterns for building APIs and web applications in Go](https://lets-go-further.alexedwards.net/)
+
+## Resources
+
+- [Alex Edwards's Blog](https://www.alexedwards.net/blog)
+
 ## Philosophy
 
 - [Worse is Better](https://www.dreamsongs.com/WorseIsBetter.html)
