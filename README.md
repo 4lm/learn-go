@@ -1,6 +1,6 @@
 # learn-go
 
-A repository to document my learning journey with Go and for future reference.
+A repository to document my learning journey with [Go](https://go.dev/) and for future reference.
 
 ## Conventions
 
