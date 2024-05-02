@@ -21,6 +21,7 @@ https://go.dev/doc/tutorial/
 
 ## Resources
 
+- [The Go Programming Language Specification](https://go.dev/ref/spec)
 - [Alex Edwards's Blog](https://www.alexedwards.net/blog)
 - [Algorithms to Go: yourbasic.org](https://yourbasic.org/)
 
