@@ -1,6 +1,10 @@
 # learn-go
 
-Repository to learn Golang.
+A repository to document my learning journey with Go and for future reference.
+
+## Conventions
+
+- [ ] [Project Structure](/conventions/project-structure/)
 
 ## Tutorials
 
