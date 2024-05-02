@@ -22,6 +22,7 @@ https://go.dev/doc/tutorial/
 ## Resources
 
 - [Alex Edwards's Blog](https://www.alexedwards.net/blog)
+- [Algorithms to Go: yourbasic.org](https://yourbasic.org/)
 
 ## Philosophy
 
