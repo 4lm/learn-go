@@ -18,6 +18,7 @@ A repository to document my learning journey with [Go](https://go.dev/) and for 
 
 ## Resources
 
+- [The Go Learning Overview Page](https://go.dev/learn/)
 - [The Go Programming Language Specification](https://go.dev/ref/spec)
 - [Alex Edwards's Blog](https://www.alexedwards.net/blog)
 - [Algorithms to Go: yourbasic.org](https://yourbasic.org/)
