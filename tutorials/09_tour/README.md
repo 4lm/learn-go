@@ -80,3 +80,48 @@ PASS
  f("A man a plan a canal panama.") =
   map[string]int{"A":1, "a":2, "canal":1, "man":1, "panama.":1, "plan":1}
 ```
+
+## Exercise: Fibonacci closure
+
+### Link
+
+https://go.dev/tour/moretypes/26
+
+### Solution
+
+```go
+package main
+
+import "fmt"
+
+func fibonacci() func() int {
+	f1, f2 := 1, 0
+	return func() int {
+		f := f2
+		f1, f2 = f1+f, f1
+		return f
+	}
+}
+
+func main() {
+	f := fibonacci()
+	for i := 0; i < 10; i++ {
+		fmt.Println(f())
+	}
+}
+```
+
+### Result
+
+```
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+```
