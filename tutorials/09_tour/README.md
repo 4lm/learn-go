@@ -164,3 +164,56 @@ func main() {
 loopback: 127.0.0.1
 googleDNS: 8.8.8.8
 ```
+
+## Exercise: Errors
+
+### Link
+
+https://go.dev/tour/methods/20
+
+### Solution
+
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+type ErrNegativeSqrt float64
+
+func (e ErrNegativeSqrt) Error() string {
+	return fmt.Sprint("cannot Sqrt negative number: ", float64(e))
+}
+
+func Sqrt(x float64) (float64, error) {
+	if x < 0 {
+		return 0, ErrNegativeSqrt(x)
+	}
+	g := 1.0 // guess
+	prev := 0.0
+	for !equal(g, prev) {
+		prev = g
+		g -= (g*g - x) / (2 * g)
+	}
+	return g, nil
+}
+
+func equal(a, b float64) bool {
+	const tolerance = 0.000000000000001
+	return math.Abs(a-b) <= tolerance
+}
+
+func main() {
+	fmt.Println(Sqrt(2))
+	fmt.Println(Sqrt(-2))
+}
+```
+
+### Result
+
+```
+1.414213562373095 <nil>
+0 cannot Sqrt negative number: -2
+```
