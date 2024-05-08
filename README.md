@@ -2,20 +2,24 @@
 
 A repository to document my learning journey with [Go](https://go.dev/) and for future reference.
 
-## Conventions
-
-- [ ] [Project Structure](/conventions/project-structure/)
-
-## Tutorials
+## Learning Path
 
 - [x] [Getting started](https://go.dev/doc/tutorial/getting-started.html), chapter: 01
 - [x] [Create a module](https://go.dev/doc/tutorial/create-module.html), chapter: 02 - 08
 - [x] [A Tour of Go](https://go.dev/tour/), chapter: 09
-- [ ] [Writing Web Applications](https://go.dev/doc/articles/wiki/)
+- [o] [Writing Web Applications](https://go.dev/doc/articles/wiki/), chapter: 10
 - [ ] [Effective Go](https://go.dev/doc/effective_go)
+
+## Candidates for Learning Path
+
+- [ ] [Web Development with Go](https://www.usegolang.com/)
 - [ ] [Learn Web Programming in Go by Examples](https://gowebexamples.com/)
 - [ ] [Let’s Go: Learn to Build Professional Web Applications with Go](https://lets-go.alexedwards.net/)
 - [ ] [Let’s Go Further: Advanced patterns for building APIs and web applications in Go](https://lets-go-further.alexedwards.net/)
+
+## Conventions
+
+- [Project Structure](/conventions/project-structure/)
 
 ## Resources
 
