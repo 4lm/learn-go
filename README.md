@@ -7,10 +7,10 @@ A repository to document my learning journey with [Go](https://go.dev/) and for 
 - [x] [Getting started](https://go.dev/doc/tutorial/getting-started.html), chapter: 01
 - [x] [Create a module](https://go.dev/doc/tutorial/create-module.html), chapter: 02 - 08
 - [x] [A Tour of Go](https://go.dev/tour/), chapter: 09
-- [ ] [Writing Web Applications](https://go.dev/doc/articles/wiki/), chapter: 10
+- [x] [Writing Web Applications](https://go.dev/doc/articles/wiki/), chapter: 10
 - [ ] [Effective Go](https://go.dev/doc/effective_go)
 
-## Candidates for Learning Path
+## Candidates for Future Learning Path
 
 - [ ] [Web Development with Go](https://www.usegolang.com/)
 - [ ] [Learn Web Programming in Go by Examples](https://gowebexamples.com/)
