@@ -278,3 +278,7 @@ Exercise: [Readers](https://go.dev/tour/concurrency/8)
 true
 false
 ```
+
+## Exercise: Web Crawler
+
+tbd
