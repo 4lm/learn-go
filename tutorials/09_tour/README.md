@@ -251,3 +251,30 @@ func main() {
 ```
 OK!
 ```
+
+## Exercise: Equivalent Binary Trees
+
+### Link
+
+Exercise: [Readers](https://go.dev/tour/concurrency/8)
+
+### Solution
+
+[`tutorials/09_tour/equivalent-binary-trees/main.go`](./equivalent-binary-trees/main.go)
+
+### Result
+
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+true
+false
+```
