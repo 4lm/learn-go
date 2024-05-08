@@ -16,6 +16,7 @@ A repository to document my learning journey with [Go](https://go.dev/) and for 
 - [ ] [Learn Web Programming in Go by Examples](https://gowebexamples.com/)
 - [ ] [Let’s Go: Learn to Build Professional Web Applications with Go](https://lets-go.alexedwards.net/)
 - [ ] [Let’s Go Further: Advanced patterns for building APIs and web applications in Go](https://lets-go-further.alexedwards.net/)
+- [ ] [Learning Cloud Native Go](https://github.com/learning-cloud-native-go/myapp)
 
 ## Conventions
 
@@ -30,3 +31,4 @@ A repository to document my learning journey with [Go](https://go.dev/) and for 
 - [Algorithms to Go: yourbasic.org](https://yourbasic.org/)
 - [How I write HTTP services in Go after 13 years](https://grafana.com/blog/2024/02/09/how-i-write-http-services-in-go-after-13-years/)
 - [The standard library now has all you need for advanced routing in Go](https://www.youtube.com/watch?v=H7tbjKFSg58)
+- [Gophercises](https://gophercises.com/)
