@@ -23,15 +23,16 @@ func main() {
 }
 
 func home(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Home"))
+	w.Write([]byte("Home / - GET"))
 }
 
 func itemCreate(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Home / Item / Create"))
+	w.Write([]byte("Home / Item / Create - GET"))
 }
 
 func itemCreatePost(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Home / Item / Create POST: saving new item..."))
+	w.WriteHeader(201)
+	w.Write([]byte("Home / Item / Create - POST"))
 }
 
 func itemViewId(w http.ResponseWriter, r *http.Request) {
@@ -41,6 +42,6 @@ func itemViewId(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	msg := fmt.Sprintf("Home / Item / View / %d", id)
+	msg := fmt.Sprintf("Home / Item / View / %d - GET", id)
 	w.Write([]byte(msg))
 }
