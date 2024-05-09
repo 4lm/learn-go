@@ -13,8 +13,8 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("GET /{$}", home)
 	mux.HandleFunc("GET /item/create", itemCreate)
-	mux.HandleFunc("POST /item/create", itemCreatePOST)
-	mux.HandleFunc("GET /item/view/{id}", itemView)
+	mux.HandleFunc("POST /item/create", itemCreatePost)
+	mux.HandleFunc("GET /item/view/{id}", itemViewId)
 
 	log.Print("http://localhost" + port)
 
@@ -30,11 +30,11 @@ func itemCreate(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Home / Item / Create"))
 }
 
-func itemCreatePOST(w http.ResponseWriter, r *http.Request) {
+func itemCreatePost(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Home / Item / Create POST: saving new item..."))
 }
 
-func itemView(w http.ResponseWriter, r *http.Request) {
+func itemViewId(w http.ResponseWriter, r *http.Request) {
 	id, err := strconv.Atoi(r.PathValue("id"))
 	if err != nil || id < 1 {
 		http.NotFound(w, r)
