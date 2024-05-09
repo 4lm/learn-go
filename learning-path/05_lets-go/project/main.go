@@ -43,6 +43,5 @@ func itemViewId(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	msg := fmt.Sprintf("Home / Item / View / %d - GET", id)
-	w.Write([]byte(msg))
+	fmt.Fprintf(w, "Home / Item / View / %d - GET", id)
 }
