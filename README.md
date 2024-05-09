@@ -4,11 +4,11 @@ A repository to document my learning journey with [Go](https://go.dev/) and for 
 
 ## Learning Path
 
-- [x] [Getting started](https://go.dev/doc/tutorial/getting-started.html), chapter: 01
-- [x] [Create a module](https://go.dev/doc/tutorial/create-module.html), chapter: 02 - 08
-- [x] [A Tour of Go](https://go.dev/tour/), chapter: 09
-- [x] [Writing Web Applications](https://go.dev/doc/articles/wiki/), chapter: 10
-- [ ] [Let’s Go: Learn to Build Professional Web Applications with Go](https://lets-go.alexedwards.net/), chapter: 11
+- [x] [Getting started](https://go.dev/doc/tutorial/getting-started.html), chapter: [01](/learning-path/01_getting-started/)
+- [x] [Create a module](https://go.dev/doc/tutorial/create-module.html), chapter: [02](/learning-path/02_create-module/)
+- [x] [A Tour of Go](https://go.dev/tour/), chapter: [03](/learning-path/03_tour/)
+- [x] [Writing Web Applications](https://go.dev/doc/articles/wiki/), chapter: [04](/learning-path/04_writing-web-applications/)
+- [ ] [Let’s Go: Learn to Build Professional Web Applications with Go](https://lets-go.alexedwards.net/), chapter: [05](/learning-path/05_lets-go/)
 - [ ] [Effective Go](https://go.dev/doc/effective_go)
 
 ## Candidates for Future Learning Path
