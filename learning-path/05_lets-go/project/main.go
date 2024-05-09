@@ -23,6 +23,7 @@ func main() {
 }
 
 func home(w http.ResponseWriter, r *http.Request) {
+	w.Header().Add("Server", "Go")
 	w.Write([]byte("Home / - GET"))
 }
 
