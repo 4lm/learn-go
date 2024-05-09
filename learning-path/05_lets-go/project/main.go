@@ -11,9 +11,10 @@ func main() {
 	const port string = ":4000"
 
 	mux := http.NewServeMux()
-	mux.HandleFunc("/{$}", home)
-	mux.HandleFunc("/item/create", itemCreate)
-	mux.HandleFunc("/item/view/{id}", itemView)
+	mux.HandleFunc("GET /{$}", home)
+	mux.HandleFunc("GET /item/create", itemCreate)
+	mux.HandleFunc("POST /item/create", itemCreatePost)
+	mux.HandleFunc("GET /item/view/{id}", itemView)
 
 	log.Print("http://localhost" + port)
 
@@ -27,6 +28,10 @@ func home(w http.ResponseWriter, r *http.Request) {
 
 func itemCreate(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Home / Item / Create"))
+}
+
+func itemCreatePost(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Home / Item / Create POST: saving new item..."))
 }
 
 func itemView(w http.ResponseWriter, r *http.Request) {
