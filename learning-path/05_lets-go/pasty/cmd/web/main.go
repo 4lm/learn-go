@@ -8,7 +8,7 @@ import (
 )
 
 type application struct {
-	log *slog.Logger
+	logger *slog.Logger
 }
 
 func main() {
@@ -19,7 +19,7 @@ func main() {
 	logger := createLogger(logFmt)
 
 	app := &application{
-		log: logger,
+		logger: logger,
 	}
 
 	mux := http.NewServeMux()
