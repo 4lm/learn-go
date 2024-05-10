@@ -3,12 +3,11 @@ package main
 import (
 	"fmt"
 	"html/template"
-	"log"
 	"net/http"
 	"strconv"
 )
 
-func home(w http.ResponseWriter, r *http.Request) {
+func (app *application) home(w http.ResponseWriter, r *http.Request) {
 	w.Header().Add("Server", "Go")
 
 	filenames := []string{
@@ -19,28 +18,28 @@ func home(w http.ResponseWriter, r *http.Request) {
 
 	tmpl, err := template.ParseFiles(filenames...)
 	if err != nil {
-		log.Print(err.Error())
+		app.log.Error(err.Error(), "method", r.Method, "uri", r.URL.RequestURI())
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 		return
 	}
 
 	err = tmpl.ExecuteTemplate(w, "base", nil)
 	if err != nil {
-		log.Print(err.Error())
+		app.log.Error(err.Error(), "method", r.Method, "uri", r.URL.RequestURI())
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 	}
 }
 
-func itemCreate(w http.ResponseWriter, r *http.Request) {
+func (app *application) itemCreate(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Home / Item / Create - GET"))
 }
 
-func itemCreatePost(w http.ResponseWriter, r *http.Request) {
+func (app *application) itemCreatePost(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusCreated)
 	w.Write([]byte("Home / Item / Create - POST"))
 }
 
-func itemViewId(w http.ResponseWriter, r *http.Request) {
+func (app *application) itemViewId(w http.ResponseWriter, r *http.Request) {
 	id, err := strconv.Atoi(r.PathValue("id"))
 	if err != nil || id < 1 {
 		http.NotFound(w, r)
