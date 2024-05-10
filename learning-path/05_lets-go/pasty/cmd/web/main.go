@@ -35,17 +35,3 @@ func main() {
 	logger.Error(err.Error())
 	os.Exit(1)
 }
-
-func createLogger(logFmt *string) *slog.Logger {
-	options := &slog.HandlerOptions{
-		AddSource: true,
-	}
-	var loggerHandler slog.Handler
-	if *logFmt == "json" {
-		loggerHandler = slog.NewJSONHandler(os.Stdout, options)
-	} else {
-		loggerHandler = slog.NewTextHandler(os.Stdout, options)
-	}
-	logger := slog.New(loggerHandler)
-	return logger
-}
