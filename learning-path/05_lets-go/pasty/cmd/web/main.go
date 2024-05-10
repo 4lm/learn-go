@@ -1,11 +1,15 @@
 package main
 
 import (
+	"flag"
 	"log"
 	"net/http"
 )
 
 func main() {
+	addr := flag.String("addr", ":4000", "HTTP network address")
+	flag.Parse()
+
 	mux := http.NewServeMux()
 	fileServer := http.FileServer(http.Dir("./ui/static/"))
 
@@ -15,8 +19,7 @@ func main() {
 	mux.HandleFunc("POST /item/create", itemCreatePost)
 	mux.HandleFunc("GET /item/view/{id}", itemViewId)
 
-	const port string = ":4000"
-	log.Print("http://localhost" + port)
-	err := http.ListenAndServe(port, mux)
+	log.Print("http://localhost" + *addr)
+	err := http.ListenAndServe(*addr, mux)
 	log.Fatal(err)
 }
