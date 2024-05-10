@@ -1,6 +1,7 @@
 package main
 
 import (
+	"database/sql"
 	"log/slog"
 	"net/http"
 	"os"
@@ -34,4 +35,19 @@ func createLogger(logFmt *string) *slog.Logger {
 	}
 	logger := slog.New(loggerHandler)
 	return logger
+}
+
+func openDB(dsn string) (*sql.DB, error) {
+	db, err := sql.Open("mysql", dsn)
+	if err != nil {
+		return nil, err
+	}
+
+	err = db.Ping()
+	if err != nil {
+		db.Close()
+		return nil, err
+	}
+
+	return db, nil
 }

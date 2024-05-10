@@ -1,5 +1,11 @@
 https://lets-go.alexedwards.net/
 
+## Run App
+
+```bash
+make
+```
+
 ## Database Handling
 
 Install (macOS w/ brew installed):
