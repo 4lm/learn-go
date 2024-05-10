@@ -9,13 +9,13 @@ import (
 
 func main() {
 	addr := flag.String("addr", ":4000", "HTTP network address")
+	logFmt := flag.String("logFmt", "text", "\"text\" or \"json\" logs")
 	flag.Parse()
 
-	logger := slog.New(slog.NewTextHandler(os.Stdout, nil))
+	logger := createLogger(logFmt)
 
 	mux := http.NewServeMux()
 	fileServer := http.FileServer(http.Dir("./ui/static/"))
-
 	mux.Handle("GET /static/", http.StripPrefix("/static", fileServer))
 	mux.HandleFunc("GET /{$}", home)
 	mux.HandleFunc("GET /item/create", itemCreate)
@@ -26,4 +26,15 @@ func main() {
 	err := http.ListenAndServe(*addr, mux)
 	logger.Error(err.Error())
 	os.Exit(1)
+}
+
+func createLogger(logFmt *string) *slog.Logger {
+	var loggerHandler slog.Handler
+	if *logFmt == "json" {
+		loggerHandler = slog.NewJSONHandler(os.Stdout, nil)
+	} else {
+		loggerHandler = slog.NewTextHandler(os.Stdout, nil)
+	}
+	logger := slog.New(loggerHandler)
+	return logger
 }
