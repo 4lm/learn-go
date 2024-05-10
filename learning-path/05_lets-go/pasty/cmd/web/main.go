@@ -22,16 +22,8 @@ func main() {
 		logger: logger,
 	}
 
-	mux := http.NewServeMux()
-	fileServer := http.FileServer(http.Dir("./ui/static/"))
-	mux.Handle("GET /static/", http.StripPrefix("/static", fileServer))
-	mux.HandleFunc("GET /{$}", app.home)
-	mux.HandleFunc("GET /item/create", app.itemCreate)
-	mux.HandleFunc("POST /item/create", app.itemCreatePost)
-	mux.HandleFunc("GET /item/view/{id}", app.itemViewId)
-
 	logger.Info("starting server", slog.String("addr", *addr))
-	err := http.ListenAndServe(*addr, mux)
+	err := http.ListenAndServe(*addr, app.routes())
 	logger.Error(err.Error())
 	os.Exit(1)
 }
