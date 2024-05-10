@@ -22,7 +22,7 @@ func main() {
 	mux.HandleFunc("POST /item/create", itemCreatePost)
 	mux.HandleFunc("GET /item/view/{id}", itemViewId)
 
-	logger.Info("starting server", "addr", *addr)
+	logger.Info("starting server", slog.String("addr", *addr))
 	err := http.ListenAndServe(*addr, mux)
 	logger.Error(err.Error())
 	os.Exit(1)
