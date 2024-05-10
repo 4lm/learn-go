@@ -28,21 +28,21 @@ func (app *application) home(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func (app *application) itemCreate(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Home / Item / Create - GET"))
+func (app *application) snippetCreate(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Home / Snippet / Create - GET"))
 }
 
-func (app *application) itemCreatePost(w http.ResponseWriter, r *http.Request) {
+func (app *application) snippetCreatePost(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusCreated)
-	w.Write([]byte("Home / Item / Create - POST"))
+	w.Write([]byte("Home / Snippet / Create - POST"))
 }
 
-func (app *application) itemViewId(w http.ResponseWriter, r *http.Request) {
+func (app *application) snippetViewId(w http.ResponseWriter, r *http.Request) {
 	id, err := strconv.Atoi(r.PathValue("id"))
 	if err != nil || id < 1 {
 		http.NotFound(w, r)
 		return
 	}
 
-	fmt.Fprintf(w, "Home / Item / View / %d - GET", id)
+	fmt.Fprintf(w, "Home / Snippet / View / %d - GET", id)
 }
